@@ -1,7 +1,7 @@
 console.log("Exercicio 1")
 
-let number1 = 15
-let number2 = 16
+let number1 = parseInt(prompt("Digite primeiro numero"))
+let number2 = parseInt(prompt("Digite segundo numero"))
 
 if(number1>number2){
     let diferenca = number1-number2
@@ -19,8 +19,8 @@ if(number1>number2){
 
 console.log("Exercicio 2")
 
-let numero1 = 10.1
-let numero2 = 10
+let numero1 = parseFloat(prompt("Digite numero 1 para análise."))
+let numero2 = parseFloat(prompt("Digite numero 2 para análise."))
 
 if(numero1 > numero2){
     alert(`O numero ${numero1} é maior que número ${numero2}`)
@@ -36,8 +36,8 @@ if(numero1 > numero2){
 
 console.log("Exercicio 3")
 
-let salarioTrabalhador = 1000
-let valorPrestacao = 350
+let salarioTrabalhador = parseFloat(prompt("Digite salário do trabalhador."))
+let valorPrestacao = parseFloat(prompt("Digite valor da prestação."))
 
 let calculoEmprestimo = (valorPrestacao/salarioTrabalhador)*100
 
@@ -53,7 +53,7 @@ if(calculoEmprestimo<30){
 
 console.log("Exercicio 4")
 
-let valorAnalisado = 15
+let valorAnalisado = parseInt(prompt("Digite número que será analisado"))
 
 if(valorAnalisado % 3 === 0 & valorAnalisado % 5 === 0){
     alert(`Valor invalido`)
@@ -61,6 +61,10 @@ if(valorAnalisado % 3 === 0 & valorAnalisado % 5 === 0){
     alert(`Valor divisivel por 5`)
 }else if(valorAnalisado % 3 === 0){
     alert(`Valor divisível por 3`)
+}else if(valorAnalisado % 2 === 0){
+    alert(`É par`)
+}else if(valorAnalisado % 2 != 0){
+    alert(`É ímpar`)
 }
 
 
@@ -98,8 +102,8 @@ if(diaDigitado === 1){
 
 console.log("Exercicio 6")
 
-let salarioFuncionario = 1156.90
-let percentualAjuste = 4.5
+let salarioFuncionario = parseFloat(prompt("Digite salário do funcionário."))
+let percentualAjuste = parseFloat(prompt("Digite a % de aumento do funcionário."))
 let valorReajuste = (percentualAjuste*salarioFuncionario)/100
 
 if(percentualAjuste<5.1){
@@ -117,8 +121,8 @@ if(percentualAjuste<5.1){
 
 console.log("Exercicio 7")
 
-let valorDolar = 200.00
-let cotacao = 5.40
+let valorDolar = parseFloat(prompt("Digite quantos dólares tu tem bro."))
+let cotacao = parseFloat(prompt("Qual a cotação atual do dólar?"))
 let valorReal = valorDolar*cotacao
 
 alert(`$${valorDolar.toFixed(2)} é equivalente a R$${valorReal.toFixed(2)}, tendo ${cotacao.toFixed(2)} como cotação`)
@@ -135,8 +139,8 @@ console.log("Exercicio 8")
 // Tipo 3 – broca R$ 150,00 por acre;
 // Tipo 4 – todos acima R$ 250,00 por acre.
 
-let tipoVaporizacao = 4
-let areaAcre = 1001
+let tipoVaporizacao = parseInt(prompt("Digite o tipo de erva que o Sr. quer pulverizar."))
+let areaAcre = parseInt(prompt("Por facor, digite quantos acres serão pulverizados."))
 
 if(tipoVaporizacao === 1){
 
@@ -203,8 +207,8 @@ if(tipoVaporizacao === 1){
 
 console.log("Exercicio 9")
 
-let tempo = 5
-let velocidade = 80
+let tempo = parseInt(prompt("Digite por gentileza o tempo da viagem."))
+let velocidade = parseInt(prompt("Digite sua velocidade em km/h."))
 let distancia = tempo*velocidade
 let litrosUsados = distancia/12
 
@@ -220,9 +224,9 @@ alert(`Seu veículo percorreu ${distancia} km a ${velocidade} km/h em ${tempo}h 
 
 console.log("Exercicio 10")
 
-let valor = 220
-let taxa = 3
-let tempoAtraso = 0.5
+let valor = parseFloat(prompt("Digite o valor da parcela."))
+let taxa = parseFloat(prompt("Digite a taxa de multa"))
+let tempoAtraso = parseInt(prompt("Digite quantos dias foram atrasados!"))
 let prestacao = valor+(valor*(taxa/100)*tempoAtraso)
 
 if(Number.isInteger(tempoAtraso)===true && tempoAtraso>0){
